@@ -121,10 +121,10 @@ class usercontroller extends Controller
         ticket::insert($data);
         return redirect('/viewticket');
     }
-    public function viewticket()
+    public function viewtickets()
     {
         $id = session('sess');
         $data['ticket'] = ticket::where('userid', $id)->get();
-        return view('user.viewticket', $data);
+        return view('user.viewtickets', $data);
     }
 }

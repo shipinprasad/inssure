@@ -8,7 +8,6 @@ use App\Models\policy;
 use App\Models\about;
 use App\Models\registrate;
 use App\Models\contactu;
-use App\Models\first;
 use App\Models\ticket;
 use App\Models\admin;
 USE App\Models\appliedpolicy;
@@ -25,7 +24,7 @@ class admincontroller extends Controller
     public function index()
     {
         $data['policy'] = policy::count();
-        $data['first'] = first::count();
+        $data['first'] = appliedpolicy::count();
         $data['registrate'] = registrate::count();
         $data['ticket'] = ticket::count();
         return view('admin.index', $data);

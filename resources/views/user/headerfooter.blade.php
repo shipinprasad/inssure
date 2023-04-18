@@ -73,6 +73,7 @@
         <a href="/appliedinsurancepolicies" class="nav-item nav-link">Applied Insurance Policies</a>
         <a href="/myprofile" class="nav-item nav-link">My Profile</a>
         <a href="/tickets" class="nav-item nav-link">Tickets</a>
+        <a href="/userviewtickets" class="nav-item nav-link">View Tickets</a>
         <a href="/logout" class="nav-item nav-link">Log Out</a>
       </div>
     </div>

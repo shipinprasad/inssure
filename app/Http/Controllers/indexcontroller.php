@@ -78,4 +78,8 @@ class indexcontroller extends Controller
         $data['about']=about::get();
         return view('index.aboutus',$data);
     }
+    public function logout()
+    {
+        return redirect('/');
+    }
 }

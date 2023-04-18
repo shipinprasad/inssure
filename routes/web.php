@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\admincontroller;
 use App\Http\Controllers\indexcontroller;
 use App\Http\Controllers\usercontroller;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -24,6 +25,7 @@ Route::post('/contactusaction',[indexcontroller::class,'contactusaction']);
 Route::get('/viewregistration',[indexcontroller::class,'viewregistration']);
 Route::get('/userlogin',[indexcontroller::class,'userlogin']);
 Route::post('/userloginaction',[indexcontroller::class,'userloginaction']);
+Route::get('/logout',[indexcontroller::class,'logout']);
 
 Route::get('/user',[usercontroller::class,'index']);
 Route::get('/aboutus',[usercontroller::class,'aboutus']);
@@ -35,7 +37,8 @@ Route::get('/apply/{id}',[usercontroller::class,'apply']);
 Route::post('/applyaction/{id}',[usercontroller::class,'applyaction']);
 Route::get('/tickets',[usercontroller::class,'tickets']);
 Route::post('/ticketsaction',[usercontroller::class,'ticketsaction']);
-Route::get('/viewticket',[usercontroller::class,'viewticket']);
+Route::get('/userviewtickets',[usercontroller::class,'viewtickets']);
+
 
 
 
@@ -67,10 +70,8 @@ Route::get('/editabout/{id}',[admincontroller::class,'editabout']);
 Route::post('/editaboutaction/{id}',[admincontroller::class,'editaboutaction']);
 Route::get('/deleteabout/{id}',[admincontroller::class,'deleteabout']);
 Route::get('/viewuser',[admincontroller::class,'viewuser']);
-Route::get('/userregistration',[admincontroller::class,'userregistration']);
 Route::get('/viewpolicies',[admincontroller::class,'viewpolicies']);
 Route::get('/viewpolicyholders',[admincontroller::class,'viewpolicyholders']);
-Route::get('/newpolicy',[admincontroller::class,'newpolicy']);
 Route::get('/approvedpolicyholders/{id}',[admincontroller::class,'approvedpolicyholders']);
 Route::get('/declinedpolicyholders/{id}',[admincontroller::class,'declinedpolicyholders']);
 Route::get('/viewtickets',[admincontroller::class,'viewtickets']);
@@ -79,4 +80,3 @@ Route::post('/changeaction/{id}',[admincontroller::class,'changeaction']);
 Route::get('/viewprofile',[admincontroller::class,'viewprofile']);
 Route::post('/adminloginaction',[adminController::class,'adminloginaction']);
 Route::post('/viewprofileaction',[admincontroller::class,'viewprofileaction']);
-// Route::get('/password',[admincontroller::class,'password']);
